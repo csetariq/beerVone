@@ -1,0 +1,56 @@
+<web-app>
+	<servlet>
+		<servlet-name>Ch3 Beer</servlet-name>
+		<servlet-class>com.example.web.BeerSelect</servlet-class>
+
+		<init-param>
+			<param-name>limit</param-name>
+			<param-value>16385</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Ch3 Beer</servlet-name>
+		<url-pattern>/SelectBeer.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Streamer</servlet-name>
+		<servlet-class>com.example.web.CodeStream</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Streamer</servlet-name>
+		<url-pattern>/download.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Rewrite</servlet-name>
+		<servlet-class>com.example.web.URLTest</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Rewrite</servlet-name>
+		<url-pattern>/url</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CheckCookie</servlet-name>
+		<servlet-class>com.example.web.CheckCookie</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CheckCookie</servlet-name>
+		<url-pattern>/checkcookie.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CookieTest</servlet-name>
+		<servlet-class>com.example.web.CookieTest</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CookieTest</servlet-name>
+		<url-pattern>/cookietest.do</url-pattern>
+	</servlet-mapping>
+
+	<listeners>
+		<listener-class>com.example.listener.MyHttpSessionListener</listener-class>
+	</listeners>
+</web-app>
+
